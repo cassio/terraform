@@ -1,5 +1,5 @@
 terraform {
 backend "cassio-backend" {
-bucket = "cassio-bucket"
-prefix = "<cbc-prefix" }
+bucket = "gcs-cassio"
+prefix = "terraform/state" }
 }
