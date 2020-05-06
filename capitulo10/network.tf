@@ -1,6 +1,6 @@
 module "network" {
-	source = "./cassio-vpc-custom"
-	name = "tf-chapter10"
+	source = "git::https://github.com/cassio/cassio-vpc-custom.git?ref=v1.0.4"
+	name = "cassio-vpc-cap10"
 	project = "sound-yew-275622"
 	description = "Rede do chapter 10"
 }
