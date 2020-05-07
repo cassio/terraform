@@ -1,7 +1,8 @@
 resource "google_compute_instance" "vm0" {
-  name         = "instancia0"
-  machine_type = "n1-standard-1"
-  zone         = "southamerica-east1-a"
+
+	name = format ("%s-%s", terraform.workspace,"instancia0")
+	machine_type = "n1-standard-1"
+	zone = "southamerica-east1-a"
 
   boot_disk {
     initialize_params {
@@ -14,7 +15,7 @@ resource "google_compute_instance" "vm0" {
   }
 
   network_interface {
-    network = default 
+    network = "default"
 
     access_config {
     }
